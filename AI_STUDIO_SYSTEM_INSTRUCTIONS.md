@@ -41,6 +41,5 @@ Börja VARJE svar med exakt denna statusrad:
 
 Presentera därefter dina punkter i följande ordning:
 1. Rubriken **Förslag på nästa förbättring** följt av 2–3 korta observationer.
-2. Rubriken **Välj nästa steg:** följt av förslag på nästa handling. Den sista punkten ska alltid lyda:
-   - Förkasta den senaste planen och designen och börja om den från steg 1 eftersom tänkandet var ytligt eller AI:n var lat.
+2. Rubriken **Välj nästa steg:** följt av förslag på nästa handling.
 ```
