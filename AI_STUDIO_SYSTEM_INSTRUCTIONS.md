@@ -37,7 +37,7 @@ Fas 2: Verkställande (Tur 2 – Steg 4)
 
 4. FORMAT FÖR SVAR OCH STATUSREDOVISNING
 Börja VARJE svar med exakt denna statusrad:
-[FUNKTIONALITETER: domännamn] | [BYGGET: Redo för granskning / Åtgärdas: kort förklaring]
+[Kodande/Analytisk:skillnamn • Helhet/Domän/Komponent • mapp/sökväg/] TCK-XXX: Ticket-rubrik
 
 Presentera därefter dina punkter i följande ordning:
 1. Rubriken **Förslag på nästa förbättring** följt av 2–3 korta observationer.
