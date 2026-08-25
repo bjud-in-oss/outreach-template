@@ -23,7 +23,7 @@ Lycka till även du med ditt kreativa skapande.
 
 - 🌟 **[Steg-för-steg: Så startar du ett nytt projekt (Enkel Guide)](GUIDE_KOM_IGANG.md)** – *Börja här! Enkel 1-2-3 guide.*
 - 📖 **[Fullständig Arkitektur- & Metodbeskrivning (SI v9.3)](doc/ARKITEKTUR_BESKRIVNING.md)** – *Djupgående förklaring av FSD, processkedjan och mekaniska spärrar.*
-- ⚙️ **[Systeminstruktion för Google AI Studio (SI v9.5)](AI_STUDIO_SYSTEM_INSTRUCTIONS.md)** – *Texten att klistra in i System Instructions.*
+- ⚙️ **[Systeminstruktion för Google AI Studio (SI v9.4)](AI_STUDIO_SYSTEM_INSTRUCTIONS.md)** – *Texten att klistra in i System Instructions.*
 - 🚀 **[Startprompt för Nytt Projekt](START_PROMPT.md)** – *Den perfekta prompten för att starta första chatten.*
 - 🧠 **[3-Zonsmallen för Säker AI-integration](src/shared/templates/ai_zones/README.md)** – *Mönster för Gemini & LLM (Sanitizer, Reasoner, Executor).*
 - 🛡️ **[Färdighetsstrategi & Matt Pocock Skills](SKILLS_STRATEGI.md)** – *Varför färdigheterna ligger lokalt och hur de uppdateras.*
