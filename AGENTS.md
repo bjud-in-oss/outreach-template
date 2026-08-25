@@ -1,8 +1,8 @@
-# RUTINER FÖR SKILL- OCH TICKET-ADAPTERING (SI v9.2)
+# RUTINER FÖR SKILL- OCH TICKET-ADAPTERING (v9.4)
 
 **1. Central ticket-logistik (doc/TICKETS.md)**
 * Skapa eller uppdatera alltid `doc/TICKETS.md` i Steg 1a (Orientera).
-* Sätt `ticket_type` till en av: "Task", "Research", "Prototype" eller "Grilling".
+* Sätt `ticket_type` till en av: Task, Bug, Feature, Refactor, Research, Prototype, Grilling, Spike, Docs.
 * Sätt `status` till "Open", "In Progress" eller "Closed".
 * Knyt varje ticket till exakt 1 domän under `src/features/` (eller "Global" för tvärgående Research och Arkitektur).
 
@@ -25,6 +25,10 @@ Skanna och applicera relevanta färdigheter från `doc/skills/mattpocock/skills/
   }
   ```
 
-**4. Anpassning för icke-kodande tickets (Research & Grilling)**
-* Behandla den analyserade kunskapen eller beslutsunderlaget i Steg 3c som den slutgiltiga artefakten vid Research och Grilling.
-* Avsluta cykeln direkt vid Steg 3c genom att sätta "BESLUT: GODKÄND" i `3c` och uppdatera status till "Closed" i `doc/TICKETS.md`.
+**4. Mänsklig Token-Gate och Flöde**
+* Vid godkänd 3c skapar verifieringsskriptet en slumpmässig kod i `doc/LAST_CYCLE/REQUIRED_TOKEN.txt`.
+* Presentera koden för användaren i chatten. Skapa `doc/LAST_CYCLE/APPROVAL.md` först när användaren uppgett koden som bekräftelse.
+
+**5. Anpassning för icke-kodande tickets (Research, Grilling, Spike, Docs)**
+* Behandla den analyserade kunskapen eller beslutsunderlaget i Steg 3c som den slutgiltiga artefakten vid icke-kodande insatser.
+* Avsluta cykeln direkt vid Steg 3c genom att sätta "BESLUT: GODKÄND" i 3c och uppdatera status till "Closed" i `doc/TICKETS.md`.
