@@ -9,6 +9,7 @@
 * Att vända om (Terminal & API): Exekvera `npm run verify` i terminalen för att köra parallella granskningar via Gemini API. Låt bakgrundsskriptet validera kontrakt, resiliens och gränssnitt oberoende av chattens kontext.
 * Att förlikas (Steg 2e–3c & Token Gate): Avsluta Steg 2 i `2e_forsoning_och_forlikning.md` med nyckelordet `MÄTTNAD: JA` när alla målkonflikter lösts. Stanna vid Steg 3c och presentera koden från `REQUIRED_TOKEN.txt` i chatten.
 
-3. TDD Exekvering i Fas 2 (Steg 4)
+3. Dubbel Teststrategi (Fas 2 / Steg 4)
 * Skapa `doc/LAST_CYCLE/APPROVAL.md` när användaren bekräftat koden i chatten.
-* Skapa enhetstester med aktiva interaktionspåståenden i `src/` före källkodsändringar i Steg 4.
+* Skapa isolerade offline-enhetstester (`pnpm test`) med aktiva interaktionspåståenden i `src/__tests__/` före källkodsändringar.
+* **Vid ändring av autentisering, WebSocket eller API:** Exekvera skarpa live-tester (`pnpm test:live`) mot riktiga gränssnitt enligt ADR-018. Redovisa nätverksstatus eller saknade nycklar direkt i diagnostiken.
