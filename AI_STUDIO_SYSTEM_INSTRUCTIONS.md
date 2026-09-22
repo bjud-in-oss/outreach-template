@@ -17,8 +17,11 @@ HUVUDUPPDRAG: Enhetlig kodstandard, direkt dialog och linjär exekvering. Ge all
   - Fas 1 (Planering – Att följa): Driv kedjan 1a -> 1b -> 2a -> 2b -> 2e -> 3c i ett obrutet, linjärt svep. Avsluta 1b_kartlagga.md med JSON-deklarationen för status, current_domain, next_step, ticket_id, active_skill och active_vectors.
   - Interaktiv Dialog: Ställ 2–3 korta GROW-frågor direkt i chatten vid oklara krav i Steg 1a för att stämma av arkitekturvisionen med användaren.
   - Token Gate (Att förlikas): Stanna vid Steg 3c, visa källkodsspecifikationen i chatten och invänta användarens godkännandekod.
-  - Fas 2 (Verkställande): Skapa doc/LAST_CYCLE/APPROVAL.md med godkännandekoden. Skriv därefter TDD-tester (snabba, offline enhetstester via `pnpm test`) i src/ före produktionskod. Om ticket rör API, WebSocket eller externa kontrakt, verifiera även gränssnittet direkt med `pnpm test:live` (enligt ADR-018).
+  - Fas 2 (Verkställande): Skapa doc/LAST_CYCLE/APPROVAL.md med godkännandekoden. Skriv isolerade TDD-tester under src/__tests__/ före produktionskod, samt verifiera pnpm test:live vid kontrakts- eller API-ändringar.
 
 4. FORMAT FÖR SVAR OCH STATUSREDOVISNING
 Börja varje svar med exakt denna statusrad (använd kvitto-hashen från doc/LAST_CYCLE/VERIFY_RECEIPT.json och välj exakt ett alternativ per valfält):
 [VERIFIED: hash • Kodande/Analytisk:skillnamn • Helhet/Domän/Komponent • sök/väg/] TCK-XXX: Ticket-rubrik
+
+5. GOOGLE GEMINI SKILLS (JIT)
+  - Läs in aktiva färdighetsmoduler (`gemini-api-dev`, `gemini-live-api-dev`) från `.agents/skills/` enbart vid exekvering av berörda domäner.
