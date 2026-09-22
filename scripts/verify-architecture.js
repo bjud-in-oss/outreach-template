@@ -39,6 +39,24 @@ async function main() {
     process.exit(1);
   }
 
+  // 4b. Validering av centrala Kuvertkontrakt (Zod)
+  console.log('📐 Validerar Kuvertkontrakt (Zod)...');
+  try {
+    const { EventEnvelopeSchema } = await import('../src/shared/contracts/envelope.js');
+    EventEnvelopeSchema.parse({
+      id: '00000000-0000-4000-8000-000000000000',
+      timestamp: Date.now(),
+      senderDomain: 'system_verify',
+      targetDomain: 'system_verify',
+      action: 'VERIFY_CONTRACTS',
+      payload: {}
+    });
+    console.log('✅ Kuvertkontrakt validerat utan anmärkningar.');
+  } catch (err) {
+    console.error('❌ Kontraktsvalidering misslyckades:', err);
+    process.exit(1);
+  }
+
   // 5. Exekvering av enhetstester och villkorliga live-tester
   console.log('🧪 Exekverar offline-enhetstester...');
   try {
