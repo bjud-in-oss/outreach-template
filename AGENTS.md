@@ -17,4 +17,4 @@
 
 4. Aktiva Skills och Delade Moduler (JIT)
 * Läs in `gemini-api-dev` eller `gemini-live-api-dev` från `doc/skills/` eller `~/.agents/skills/` enbart när motsvarande `active_skill` deklareras i Steg 1b.
-*
+* Slå upp sökvägen i `doc/FEATURE_INDEX.json` och läs in enbart den berörda mappen under `src/features/` vid återanvändning av existerande moduler.
