@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "shared_features": {
+    "live_translation": {
+      "path": "src/features/live_translation",
+      "contract": "src/shared/contracts/envelope.ts"
+    }
+  }
+}
