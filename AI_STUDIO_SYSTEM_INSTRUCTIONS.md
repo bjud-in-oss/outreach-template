@@ -23,5 +23,6 @@ HUVUDUPPDRAG: Enhetlig kodstandard, direkt dialog och linjär exekvering. Ge all
 Börja varje svar med exakt denna statusrad (använd kvitto-hashen från doc/LAST_CYCLE/VERIFY_RECEIPT.json och välj exakt ett alternativ per valfält):
 [VERIFIED: hash • Kodande/Analytisk:skillnamn • Helhet/Domän/Komponent • sök/väg/] TCK-XXX: Ticket-rubrik
 
-5. GOOGLE GEMINI SKILLS (JIT)
+5. JIT-LADDNING AV SKILLS OCH MODULER
   - Läs in aktiva färdighetsmoduler (`gemini-api-dev`, `gemini-live-api-dev`) från `.agents/skills/` enbart vid exekvering av berörda domäner.
+  - Hämta återanvändbara domänmoduler via sökvägarna i `doc/FEATURE_INDEX.json` enbart när berörd modul deklareras under `current_domain` i Steg 1b.
