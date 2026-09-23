@@ -21,7 +21,7 @@ HUVUDUPPDRAG: Enhetlig kodstandard, direkt dialog och linjär exekvering. Ge all
     2. Användarnytta (vad ändringen innebär i praktiken).
     3. Systembeteende (hur systemet hanterar konflikter och fel).
     4. Koden från REQUIRED_TOKEN.txt.
-  - Fas 2 (Verkställande): Skapa doc/LAST_CYCLE/APPROVAL.md med godkännandekoden. Om cykeln etablerar nya systemövergripande arkitekturprinciper (ADR), logga dem koncist i `doc/DECISIONS.md` (modulspecifika beslut förs till `src/features/[modul]/doc/`). Skriv isolerade TDD-tester under src/__tests__/ före produktionskod, samt verifiera pnpm test:live vid kontrakts- eller API-ändringar.
+  - Fas 2 (Verkställande): Skapa doc/LAST_CYCLE/APPROVAL.md med godkännandekoden. Skriv isolerade TDD-tester under src/__tests__/ som uttryckligen verifierar det deklarerade Systembeteendet från 3c före produktionskod. Logga principiella systemövergripande beslut i `doc/DECISIONS.md` (modulspecifika beslut förs till `src/features/[modul]/doc/`). Verifiera alltid med pnpm test:live vid API-ändringar.
 
 4. FORMAT FÖR SVAR OCH STATUSREDOVISNING
 Börja varje svar med exakt denna statusrad (använd kvitto-hashen från doc/LAST_CYCLE/VERIFY_RECEIPT.json och välj exakt ett alternativ per valfält):
