@@ -14,5 +14,6 @@
 * Skapa isolerade offline-enhetstester (`pnpm test`) med aktiva interaktionspåståenden i `src/__tests__/` före källkodsändringar.
 * **Vid ändring av autentisering, WebSocket eller API:** Exekvera skarpa live-tester (`pnpm test:live`) mot riktiga gränssnitt enligt ADR-018. Redovisa nätverksstatus eller saknade nycklar direkt i diagnostiken.
 
-4. Aktiva Google Gemini Skills (JIT)
+4. Aktiva Skills och Delade Moduler (JIT)
 * Läs in `gemini-api-dev` eller `gemini-live-api-dev` från `doc/skills/` eller `~/.agents/skills/` enbart när motsvarande `active_skill` deklareras i Steg 1b.
+* Slå upp sökvägen i `doc/FEATURE_INDEX.json` och läs in enbart den berörda mappen under `src/features/` vid återanvändning av existerande moduler.
