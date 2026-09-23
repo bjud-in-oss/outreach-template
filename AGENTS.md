@@ -11,8 +11,8 @@
 
 3. Dubbel Teststrategi och Fraktal Dokumentation (Fas 2 / Steg 4)
 * Skapa `doc/LAST_CYCLE/APPROVAL.md` när användaren bekräftat koden i chatten.
+* Skapa isolerade TDD-tester under `src/__tests__/` som verifierar de exakta påståendena om Systembeteende i 3c-specifikationen före källkodsändringar.
 * Logga principiella systemövergripande beslut (ADR) i `doc/DECISIONS.md`. Domänspecifika affärsregler dokumenteras lokalt i `src/features/[modul]/doc/`.
-* Skapa isolerade offline-enhetstester (`pnpm test`) med aktiva interaktionspåståenden i `src/__tests__/` före källkodsändringar.
 * **Vid ändring av autentisering, WebSocket eller API:** Exekvera skarpa live-tester (`pnpm test:live`) mot riktiga gränssnitt enligt ADR-018. Redovisa nätverksstatus eller saknade nycklar direkt i diagnostiken.
 
 4. Aktiva Skills och Delade Moduler (JIT)
